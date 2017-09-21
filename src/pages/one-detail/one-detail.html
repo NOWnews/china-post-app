@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title *ngIf="news">{{news.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="news">
+    <h1>{{news.title}}</h1>
+    <div>
+      <img src="{{news.authors[0].avatars[24]}}">
+      {{news.authors[0].name}}
+    </div>
+    <p>{{news.createdAt}}</p>
+    <p>{{news.categories[0].name}}</p>
+    <div [innerHTML]="news.content"></div>
+  </div>
+</ion-content>

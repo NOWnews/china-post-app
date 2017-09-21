@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar no-border-bottom>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let news of categories" (click)="goToCategory(news)">
+      <ion-thumbnail item-start>
+        <img src="http://www.chinapost.com.tw/simages/news_images/20170728/viewpoint.jpg">
+      </ion-thumbnail>
+      <h2>{{news.title}}</h2>
+      <p>{{news.categoryName}}</p>
+      <p>{{news.createdAt}}</p>
+      <button ion-button clear item-end>閱讀</button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
