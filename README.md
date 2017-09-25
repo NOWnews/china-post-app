@@ -5,6 +5,7 @@
 ```
 - ionic 3.10.3
 - typescript 2.3.4
+- angular 4.1.3
 - ionic-angular 3.6.1
 ```
 
