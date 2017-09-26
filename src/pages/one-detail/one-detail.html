@@ -7,12 +7,13 @@
 <ion-content padding>
   <div *ngIf="news">
     <h1>{{news.title}}</h1>
+    <hr>
     <div>
-      <img src="{{news.authors[0].avatars[24]}}">
+      <!-- <img src="{{news.authors[0].avatars[24]}}"> -->
       {{news.authors[0].name}}
     </div>
-    <p>{{news.createdAt}}</p>
-    <p>{{news.categories[0].name}}</p>
+    <p>{{news.createdAt}}  {{news.categories[0].name}}</p>
+    <hr>
     <img src="{{news.images[0]}}" />
     <div [innerHTML]="news.content"></div>
   </div>

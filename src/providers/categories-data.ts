@@ -23,7 +23,6 @@ export class CategoriesData {
 
   processData(data: any) {
     this.data = data.json();
-    console.log(this.data, 'L28')
     return this.data;
   }
 
