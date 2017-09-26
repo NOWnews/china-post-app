@@ -23,6 +23,7 @@ import { TaiwanData } from '../providers/taiwan-data';
 import { LifeData } from '../providers/life-data';
 import { WorldData } from '../providers/world-data';
 import { OneData } from '../providers/one-data';
+import { CategoriesData } from '../providers/categories-data';
 
 
 @NgModule({
@@ -66,6 +67,7 @@ import { OneData } from '../providers/one-data';
     LifeData,
     WorldData,
     OneData,
+    CategoriesData,
     InAppBrowser,
     SplashScreen
   ]
