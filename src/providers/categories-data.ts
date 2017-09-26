@@ -23,6 +23,13 @@ export class CategoriesData {
 
   processData(data: any) {
     this.data = data.json();
+
+    // 針對 ID 做排序
+    this.data.sort(function (a: any, b: any) {
+      if (a.id > b.id) return 1;
+      if (a.id < b.id) return -1;
+      return 0;
+    });
     return this.data;
   }
 
