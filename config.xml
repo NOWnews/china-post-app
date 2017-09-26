@@ -32,6 +32,7 @@
         <splash density="port-xhdpi" src="resources/android/splash/1280.png" />
         <splash density="port-xxhdpi" src="resources/android/splash/xxhdpi_1920x1920.png" />
         <splash density="port-xxxhdpi" src="resources/android/splash/xxxhdpi_2560x2560.png" />
+        <preference name="loadUrlTimeoutValue" value="700000" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
