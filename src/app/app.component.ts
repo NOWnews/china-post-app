@@ -10,6 +10,13 @@ import { NewsPage } from '../pages/news/news';
 import { TaiwanPage } from '../pages/taiwan/news';
 import { WorldPage } from '../pages/world/news';
 import { LifePage } from '../pages/life/news';
+import { AsiaPage } from '../pages/asia/news';
+import { BusinessPage } from '../pages/business/news';
+import { SportsPage } from '../pages/sports/news';
+import { TravelPage } from '../pages/travel/news';
+import { ArtPage } from '../pages/art/news';
+import { EditorialPage } from '../pages/editorial/news';
+import { HightlightPage } from '../pages/hightlight/news';
 
 
 export interface PageInterface {
@@ -30,10 +37,17 @@ export class ConferenceApp {
   @ViewChild(Nav) nav: Nav;
 
   appPages: PageInterface[] = [
-    { title: 'News', name: 'TabsPage', component: TabsPage, tabComponent: NewsPage, index: 0, icon: 'home' },
-    { title: 'Taiwan', name: 'TabsPage', component: TabsPage, tabComponent: TaiwanPage, index: 1, icon: 'logo-reddit' },
-    { title: 'World', name: 'TabsPage', component: TabsPage, tabComponent: WorldPage, index: 2, icon: 'globe' },
-    { title: 'Life', name: 'TabsPage', component: TabsPage, tabComponent: LifePage, index: 3, icon: 'walk' },
+    { title: 'Top News', name: 'TabsPage', component: TabsPage, tabComponent: NewsPage, index: 0, icon: 'home' },
+    { title: 'Taiwan', name: 'TabsPage', component: TabsPage, tabComponent: TaiwanPage, index: 1, icon: 'ios-paper-outline' },
+    { title: 'World', name: 'TabsPage', component: TabsPage, tabComponent: WorldPage, index: 2, icon: 'ios-paper-outline' },
+    { title: 'Life', name: 'TabsPage', component: TabsPage, tabComponent: LifePage, index: 3, icon: 'ios-paper-outline' },
+    { title: 'Asia', name: 'TabsPage', component: TabsPage, tabComponent: AsiaPage, index: 4, icon: 'ios-paper-outline' },
+    { title: 'Business', name: 'TabsPage', component: TabsPage, tabComponent: BusinessPage, index: 5, icon: 'ios-paper-outline' },
+    { title: 'Sports', name: 'TabsPage', component: TabsPage, tabComponent: SportsPage, index: 6, icon: 'ios-paper-outline' },
+    { title: 'Travel', name: 'TabsPage', component: TabsPage, tabComponent: TravelPage, index: 7, icon: 'ios-paper-outline' },
+    { title: 'Art & Liesure', name: 'TabsPage', component: TabsPage, tabComponent: ArtPage, index: 8, icon: 'ios-paper-outline' },
+    { title: 'Editorial', name: 'TabsPage', component: TabsPage, tabComponent: EditorialPage, index: 9, icon: 'ios-paper-outline' },
+    { title: 'Consumer Hightlight', name: 'TabsPage', component: TabsPage, tabComponent: HightlightPage, index: 10, icon: 'ios-paper-outline' }
   ];
   rootPage: any;
 

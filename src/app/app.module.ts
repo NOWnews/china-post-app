@@ -16,6 +16,13 @@ import { NewsPage } from '../pages/news/news';
 import { TaiwanPage } from '../pages/taiwan/news';
 import { WorldPage } from '../pages/world/news';
 import { LifePage } from '../pages/life/news';
+import { AsiaPage } from '../pages/asia/news';
+import { BusinessPage } from '../pages/business/news';
+import { SportsPage } from '../pages/sports/news';
+import { TravelPage } from '../pages/travel/news';
+import { ArtPage } from '../pages/art/news';
+import { EditorialPage } from '../pages/editorial/news';
+import { HightlightPage } from '../pages/hightlight/news';
 import { OneDetailPage } from '../pages/one-detail/one-detail';
 
 import { NewsData } from '../providers/news-data';
@@ -34,6 +41,13 @@ import { CategoriesData } from '../providers/categories-data';
     TaiwanPage,
     WorldPage,
     LifePage,
+    AsiaPage,
+    BusinessPage,
+    SportsPage,
+    TravelPage,
+    ArtPage,
+    EditorialPage,
+    HightlightPage,
     OneDetailPage,
   ],
   imports: [
@@ -58,6 +72,13 @@ import { CategoriesData } from '../providers/categories-data';
     TaiwanPage,
     WorldPage,
     LifePage,
+    AsiaPage,
+    BusinessPage,
+    SportsPage,
+    TravelPage,
+    ArtPage,
+    EditorialPage,
+    HightlightPage,
     OneDetailPage,
   ],
   providers: [
