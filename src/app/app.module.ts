@@ -25,9 +25,6 @@ import { HightlightPage } from '../pages/hightlight/news';
 import { OneDetailPage } from '../pages/one-detail/one-detail';
 
 import { NewsData } from '../providers/news-data';
-import { TaiwanData } from '../providers/taiwan-data';
-import { LifeData } from '../providers/life-data';
-import { WorldData } from '../providers/world-data';
 import { OneData } from '../providers/one-data';
 import { CategoriesData } from '../providers/categories-data';
 
@@ -81,9 +78,6 @@ import { CategoriesData } from '../providers/categories-data';
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     NewsData,
-    TaiwanData,
-    LifeData,
-    WorldData,
     OneData,
     CategoriesData,
     InAppBrowser,
