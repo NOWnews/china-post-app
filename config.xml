@@ -20,12 +20,12 @@
     <allow-navigation href="mailto:*" />
     <platform name="android">
         <allow-intent href="market:*" />
-        <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
-        <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />
-        <icon density="hdpi" src="resources/android/icon/drawable-hdpi-icon.png" />
-        <icon density="xhdpi" src="resources/android/icon/drawable-xhdpi-icon.png" />
-        <icon density="xxhdpi" src="resources/android/icon/drawable-xxhdpi-icon.png" />
-        <icon density="xxxhdpi" src="resources/android/icon/drawable-xxxhdpi-icon.png" />
+        <icon density="ldpi" src="resources/android/icon/AppIcon24x24@2x.png" />
+        <icon density="mdpi" src="resources/android/icon/AppIcon27.5x27.5@2x.png" />
+        <icon density="hdpi" src="resources/android/icon/AppIcon40x40@2x.png" />
+        <icon density="xhdpi" src="resources/android/icon/AppIcon44x44@2x.png" />
+        <icon density="xxhdpi" src="resources/android/icon/AppIcon86x86@2x.png" />
+        <icon density="xxxhdpi" src="resources/android/icon/AppIcon98x98@2x.png" />
         <icon src="resources/android/icon/AppIcon44x44@2x.png" />
         <splash density="port-ldpi" src="resources/android/splash/240x320.png" />
         <splash density="port-mdpi" src="resources/android/splash/320x480.png" />
