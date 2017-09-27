@@ -8,7 +8,7 @@ import { OneDetailPage } from '../one-detail/one-detail';
 
 @Component({
   selector: 'page-news',
-  templateUrl: 'news.html'
+  templateUrl: '../news/news.html'
 })
 export class HightlightPage {
   @ViewChild('navbar') slider: Slides;

@@ -8,10 +8,11 @@ import { OneDetailPage } from '../one-detail/one-detail';
 
 @Component({
   selector: 'page-news',
-  templateUrl: 'news.html'
+  templateUrl: '../news/news.html'
 })
 export class WorldPage {
   categories: any;
+  hasNews: boolean;
 
   constructor(
     public navCtrl: NavController,
