@@ -16,6 +16,7 @@ export class ArtPage {
   categories: any;
   categoriesList: any;
   catSlides: any;
+  catId: number = 8;
 
   constructor(
     public navCtrl: NavController,
@@ -39,7 +40,7 @@ export class ArtPage {
   }
 
   ionViewDidLoad() {
-    this.catData.getCategories().subscribe((categories: any[]) => {
+    this.catData.getCategories(this.catId).subscribe((categories: any[]) => {
       categories.map((news: any)=>{
         news.image = news.image || 'http://www.chinapost.com.tw/news_images/20170920/viewpoint.jpg';
         return news;

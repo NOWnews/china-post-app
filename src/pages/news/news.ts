@@ -17,6 +17,7 @@ export class NewsPage {
   categoriesList: any;
   catSlides: any;
   hasNews: boolean;
+  catId: number = 1;
 
   constructor(
     public navCtrl: NavController,
@@ -40,7 +41,7 @@ export class NewsPage {
   }
 
   ionViewDidLoad() {
-    this.catData.getCategories().subscribe((categories: any[]) => {
+    this.catData.getCategories(this.catId).subscribe((categories: any[]) => {
       if (categories.length){
         this.hasNews = true;
       }
