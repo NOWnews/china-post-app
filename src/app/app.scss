@@ -35,3 +35,17 @@
   $next: breakpoint-next($name, $breakpoints);
   @return if($next, breakpoint-min($next, $breakpoints) - 1px, null);
 }
+
+.toolbar-background-ios {
+  background: #dd0000;
+}
+.title-ios, .toolbar-title-ios, ion-title {
+  color: #fff;
+  font-size: 20px;
+}
+.toolbar-ios ion-title {
+  padding: 0 60px 1px;
+}
+.bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default {
+  color: #fff;
+}
