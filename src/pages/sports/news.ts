@@ -42,7 +42,7 @@ export class SportsPage {
   ionViewDidLoad() {
     this.catData.getCategories(this.catId).subscribe((categories: any[]) => {
       categories.map((news: any)=>{
-        news.image = news.image || 'http://www.chinapost.com.tw/news_images/20170920/viewpoint.jpg';
+        news.image = news.image || 'assets/img/default/S_Sports.png';
         return news;
       })
       this.categories = categories;

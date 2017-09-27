@@ -46,7 +46,7 @@ export class NewsPage {
         this.hasNews = true;
       }
       categories.map((news: any)=>{
-        news.image = news.image || 'http://www.chinapost.com.tw/news_images/20170920/viewpoint.jpg';
+        news.image = news.image || 'assets/img/default/S_Topnews.png';
         return news;
       })
       this.catSlides = categories.slice(0,5);

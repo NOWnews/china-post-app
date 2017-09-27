@@ -21,6 +21,10 @@ export class TaiwanPage {
 
   ionViewDidLoad() {
     this.catData.getCategories().subscribe((categories: any[]) => {
+      categories.map((news: any)=>{
+        news.image = news.image || 'assets/img/default/S_Taiwan.png';
+        return news;
+      })
       this.categories = categories;
     });
   }
