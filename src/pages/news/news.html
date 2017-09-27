@@ -3,11 +3,19 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title *ngIf="categories && categories.length">{{categories[0].categoryName}}</ion-title>
+    <ion-title *ngIf="categories && categories.length" [innerHTML]="categories[0].categoryName"></ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
   <ion-slides #navbar class="navbar" *ngIf="false && categoriesList && categoriesList.length"
     freeMode="true"
     slidesPerView="3"
@@ -47,9 +55,13 @@
         <button ion-button clear item-end>more</button>
     </ion-item>
   </ion-list>
-  <div text-center>
-    <button ion-button outline>Next Page</button>
-  </div>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 
   <ion-list-header [hidden]="hasNews">
     Nothing You Can See. ;(
