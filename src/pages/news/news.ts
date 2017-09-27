@@ -18,6 +18,8 @@ export class NewsPage {
   catSlides: any;
   hasNews: boolean;
   catId: number = 1;
+  page: number = 1;
+  defaultImg: string = 'assets/img/default/S_Topnews.png';
 
   constructor(
     public navCtrl: NavController,
@@ -41,12 +43,12 @@ export class NewsPage {
   // }
 
   ionViewDidLoad() {
-    this.catData.getCategories(this.catId).subscribe((categories: any[]) => {
+    this.catData.getCategories(this.catId, this.page).subscribe((categories: any[]) => {
       if (categories.length){
         this.hasNews = true;
       }
       categories.map((news: any)=>{
-        news.image = news.image || 'assets/img/default/S_Topnews.png';
+        news.image = news.image || this.defaultImg;
         return news;
       })
       this.catSlides = categories.slice(0,5);
@@ -65,12 +67,12 @@ export class NewsPage {
     console.log('Begin async operation', refresher);
 
     setTimeout(() => {
-      this.catData.getCategories(8).subscribe((categories: any[]) => {
+      this.catData.getCategories(this.catId, 1).subscribe((categories: any[]) => {
         if (categories.length){
           this.hasNews = true;
         }
         categories.map((news: any)=>{
-          news.image = news.image || 'assets/img/default/S_Topnews.png';
+          news.image = news.image || this.defaultImg;
           return news;
         })
         this.catSlides = categories.slice(0,5);
@@ -85,15 +87,15 @@ export class NewsPage {
     console.log('Begin async operation');
 
     setTimeout(() => {
-      this.catData.getCategories(8).subscribe((categories: any[]) => {
+      this.page++;
+      this.catData.getCategories(this.catId, this.page).subscribe((categories: any[]) => {
         categories.map((news: any)=>{
-          news.image = news.image || 'assets/img/default/S_Topnews.png';
+          news.image = news.image || this.defaultImg;
           this.categories.push(news);
           return news;
         })
       });
 
-      console.log('Async operation has ended');
       infiniteScroll.complete();
     }, 500);
   }
