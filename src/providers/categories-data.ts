@@ -9,6 +9,7 @@ import 'rxjs/add/observable/of';
 @Injectable()
 export class CategoriesData {
   data: any;
+  apiHost: string = 'http://35.201.150.36/';
 
   constructor(public http: Http) {}
 
@@ -16,7 +17,7 @@ export class CategoriesData {
     if (this.data) {
       return Observable.of(this.data);
     } else {
-      return this.http.get('http://35.201.150.36/categories')
+      return this.http.get(`${this.apiHost}categories`)
         .map(this.processData, this);
     }
   }

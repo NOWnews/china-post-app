@@ -10,14 +10,15 @@ import 'rxjs/add/observable/of';
 export class OneData {
   data: any;
   id: any;
+  apiHost: string = 'http://35.201.150.36/';
 
   constructor(public http: Http) { }
 
-  load(id: any){
-    if (this.data && this.data.newId === id) {
+  load(newsId: any){
+    if (this.data && this.data.newsId === newsId) {
       return Observable.of(this.data);
     } else {
-      return this.http.get(`http://35.201.150.36/news/${id}`)
+      return this.http.get(`${this.apiHost}news/${newsId}`)
         .map(this.processData, this);
     }
   }
