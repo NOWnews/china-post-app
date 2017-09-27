@@ -3,6 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
+    <ion-title *ngIf="categories && categories.length">{{categories[0].categoryName}}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -15,7 +16,7 @@
     (ionSlideWillChange)="onSlideWillChange($event)"
     (ionSlideDidChange)="onSlideDidChange($event)"
     (ionSlideDrag)="onSlideDrag($event)">
-    <ion-slide class="swiper-slide" *ngFor="let cat of categoriesList">
+    <ion-slide class="swiper-slide" *ngFor="let cat of categoriesList" (click)="goToCategory(news)">
       <p class="slide-title" [innerHTML]="cat.name"></p>
     </ion-slide>
   </ion-slides>
@@ -35,7 +36,7 @@
     </ion-slide>
   </ion-slides>
 
-  <ion-list>
+  <ion-list *ngIf="categories && categories.length">
     <ion-item *ngFor="let news of categories" (click)="goToCategory(news)">
         <ion-thumbnail item-start>
           <img src="{{news.image}}">
@@ -47,6 +48,10 @@
     </ion-item>
   </ion-list>
   <div text-center>
-    <button ion-button round outline>Next Page</button>
+    <button ion-button outline>Next Page</button>
   </div>
+
+  <ion-list-header [hidden]="hasNews">
+    Nothing You Can See. ;(
+  </ion-list-header>
 </ion-content>

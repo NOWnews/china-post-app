@@ -16,6 +16,7 @@ export class NewsPage {
   categories: any;
   categoriesList: any;
   catSlides: any;
+  hasNews: boolean;
 
   constructor(
     public navCtrl: NavController,
@@ -40,12 +41,15 @@ export class NewsPage {
 
   ionViewDidLoad() {
     this.catData.getCategories().subscribe((categories: any[]) => {
+      if (categories.length){
+        this.hasNews = true;
+      }
       categories.map((news: any)=>{
         news.image = news.image || 'http://www.chinapost.com.tw/news_images/20170920/viewpoint.jpg';
         return news;
       })
-      this.categories = categories;
       this.catSlides = categories.slice(0,5);
+      this.categories = categories.slice(5);
     });
     this.catListData.getCategoriesList().subscribe((categories: any[]) => {
       this.categoriesList = categories;
