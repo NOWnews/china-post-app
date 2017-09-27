@@ -20,18 +20,19 @@
     <allow-navigation href="mailto:*" />
     <platform name="android">
         <allow-intent href="market:*" />
-        <icon density="ldpi" src="resources/android/icon/AppIcon24x24@2x.png" />
-        <icon density="mdpi" src="resources/android/icon/AppIcon27.5x27.5@2x.png" />
-        <icon density="hdpi" src="resources/android/icon/AppIcon40x40@2x.png" />
-        <icon density="xhdpi" src="resources/android/icon/AppIcon44x44@2x.png" />
-        <icon density="xxhdpi" src="resources/android/icon/AppIcon86x86@2x.png" />
-        <icon density="xxxhdpi" src="resources/android/icon/AppIcon98x98@2x.png" />
+        <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
+        <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />
+        <icon density="hdpi" src="resources/android/icon/drawable-hdpi-icon.png" />
+        <icon density="xhdpi" src="resources/android/icon/drawable-xhdpi-icon.png" />
+        <icon density="xxhdpi" src="resources/android/icon/drawable-xxhdpi-icon.png" />
+        <icon density="xxxhdpi" src="resources/android/icon/drawable-xxxhdpi-icon.png" />
         <icon src="resources/android/icon/AppIcon44x44@2x.png" />
-        <splash density="port-mdpi" src="resources/android/splash/640.png" />
-        <splash density="port-hdpi" src="resources/android/splash/960.png" />
-        <splash density="port-xhdpi" src="resources/android/splash/1280.png" />
-        <splash density="port-xxhdpi" src="resources/android/splash/xxhdpi_1920x1920.png" />
-        <splash density="port-xxxhdpi" src="resources/android/splash/xxxhdpi_2560x2560.png" />
+        <splash density="port-ldpi" src="resources/android/splash/240x320.png" />
+        <splash density="port-mdpi" src="resources/android/splash/320x480.png" />
+        <splash density="port-hdpi" src="resources/android/splash/480x800.png" />
+        <splash density="port-xhdpi" src="resources/android/splash/720x1280.png" />
+        <splash density="port-xxhdpi" src="resources/android/splash/960x1600.png" />
+        <splash density="port-xxxhdpi" src="resources/android/splash/1280x1920.png" />
         <preference name="loadUrlTimeoutValue" value="700000" />
     </platform>
     <platform name="ios">
@@ -56,11 +57,13 @@
         <icon height="29" src="resources/ios/icon/Icon-Small.png" width="29" />
         <icon height="58" src="resources/ios/icon/Icon-Small@2x.png" width="58" />
         <icon height="87" src="resources/ios/icon/Icon-Small@3x.png" width="87" />
-        <splash height="2560" src="resources/ios/splash/xxxhdpi_2560x2560.png" width="2560" />
-        <splash height="1920" src="resources/ios/splash/xxhdpi_1920x1920.png" width="1920" />
-        <splash height="1280" src="resources/ios/splash/1280.png" width="1280" />
-        <splash height="960" src="resources/ios/splash/960.png" width="960" />
-        <splash height="640" src="resources/ios/splash/640.png" width="640" />
+        <splash height="1136" src="resources/ios/splash/640x1136.png" width="640" />
+        <splash height="1334" src="resources/ios/splash/750x1334.png" width="750" />
+        <splash height="2208" src="resources/ios/splash/1242x2208.png" width="1242" />
+        <splash height="2048" src="resources/ios/splash/1536x2048.png" width="1536" />
+        <splash height="1024" src="resources/ios/splash/768x1024.png" width="768" />
+        <splash height="960" src="resources/ios/splash/640x960.png" width="640" />
+        <splash height="480" src="resources/ios/splash/320x480.png" width="320" />
     </platform>
     <preference name="webviewbounce" value="false" />
     <preference name="UIWebViewBounce" value="false" />
