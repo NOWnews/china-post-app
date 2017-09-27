@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 
-import { WorldData } from '../../providers/world-data';
+import { NewsData } from '../../providers/news-data';
 import { OneDetailPage } from '../one-detail/one-detail';
 
 @Component({
@@ -13,14 +13,18 @@ import { OneDetailPage } from '../one-detail/one-detail';
 export class WorldPage {
   categories: any;
   hasNews: boolean;
+  catId: number = 4;
 
   constructor(
     public navCtrl: NavController,
-    public catData: WorldData
+    public catData: NewsData
   ) {}
 
   ionViewDidLoad() {
-    this.catData.getCategories().subscribe((categories: any[]) => {
+    this.catData.getCategories(this.catId).subscribe((categories: any[]) => {
+      if (categories.length){
+        this.hasNews = true;
+      }
       categories.map((news: any)=>{
         news.image = news.image || 'assets/img/default/S_World.png';
         return news;

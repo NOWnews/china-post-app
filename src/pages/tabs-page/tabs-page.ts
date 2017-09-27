@@ -5,7 +5,6 @@ import { NavParams } from 'ionic-angular';
 import { NewsPage } from '../news/news';
 import { TaiwanPage } from '../taiwan/news';
 import { WorldPage } from '../world/news';
-import { LifePage } from '../life/news';
 import { AsiaPage } from '../asia/news';
 import { BusinessPage } from '../business/news';
 import { SportsPage } from '../sports/news';
@@ -22,14 +21,13 @@ export class TabsPage {
   tab1Root: any = NewsPage;
   tab2Root: any = TaiwanPage;
   tab3Root: any = WorldPage;
-  tab4Root: any = LifePage;
-  tab5Root: any = AsiaPage;
-  tab6Root: any = BusinessPage;
-  tab7Root: any = SportsPage;
-  tab8Root: any = TravelPage;
-  tab9Root: any = ArtPage;
-  tab10Root: any = EditorialPage;
-  tab11Root: any = HightlightPage;
+  tab4Root: any = AsiaPage;
+  tab5Root: any = BusinessPage;
+  tab6Root: any = SportsPage;
+  tab7Root: any = TravelPage;
+  tab8Root: any = ArtPage;
+  tab9Root: any = EditorialPage;
+  tab10Root: any = HightlightPage;
   mySelectedIndex: number;
 
   constructor(navParams: NavParams) {

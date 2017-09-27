@@ -15,7 +15,6 @@ import { TabsPage } from '../pages/tabs-page/tabs-page';
 import { NewsPage } from '../pages/news/news';
 import { TaiwanPage } from '../pages/taiwan/news';
 import { WorldPage } from '../pages/world/news';
-import { LifePage } from '../pages/life/news';
 import { AsiaPage } from '../pages/asia/news';
 import { BusinessPage } from '../pages/business/news';
 import { SportsPage } from '../pages/sports/news';
@@ -40,7 +39,6 @@ import { CategoriesData } from '../providers/categories-data';
     NewsPage,
     TaiwanPage,
     WorldPage,
-    LifePage,
     AsiaPage,
     BusinessPage,
     SportsPage,
@@ -59,7 +57,7 @@ import { CategoriesData } from '../providers/categories-data';
         { component: NewsPage, name: 'NewsPage', segment: 'news' },
         { component: TaiwanPage, name: 'TaiwanPage', segment: 'taiwan' },
         { component: WorldPage, name: 'WorldPage', segment: 'world' },
-        { component: LifePage, name: 'LifePage', segment: 'life' },
+        { component: AsiaPage, name: 'AsiaPage', segment: 'asia' },
       ]
     }),
     IonicStorageModule.forRoot()
@@ -71,7 +69,6 @@ import { CategoriesData } from '../providers/categories-data';
     NewsPage,
     TaiwanPage,
     WorldPage,
-    LifePage,
     AsiaPage,
     BusinessPage,
     SportsPage,
