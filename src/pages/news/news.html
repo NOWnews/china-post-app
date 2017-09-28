@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <img src="assets/img/header/APP_Header_195x54.png" style="float: right" height="35px"/>
+    <img src="assets/img/default/APP_Header_260x72.png" style="float: right" height="35px"/>
     <ion-title *ngIf="categories && categories.length" [innerHTML]="categories[0].categoryName"></ion-title>
   </ion-navbar>
 </ion-header>
@@ -36,7 +36,7 @@
     speed="1000"
     >
     <ion-slide *ngFor="let news of catSlides" class="slide-news" (click)="goToCategory(news)">
-      <img src="http://www.chinapost.com.tw/news_images/20170920/viewpoint.jpg">
+      <img src="{{news.image}}">
       <div class="slide-info">
         <h2 class="slide-title" [innerHTML]="news.title"></h2>
         <p>{{news.categoryName}} - {{news.createdAt}}</p>
