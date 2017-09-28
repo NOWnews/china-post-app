@@ -15,6 +15,12 @@
 npm install -g cordova ionic
 ```
 
+> Note .
+>
+> 要 build Android 請參考 (Cordova Android Platform Guide)[https://cordova.apache.org/docs/en/7.x/guide/platforms/android/]
+>
+> 要 build IOS 請參考 (Cordova IOS Platform Guide)[https://cordova.apache.org/docs/en/7.x/guide/platforms/ios/]
+
 啟動
 
 ```
@@ -108,3 +114,7 @@ china-post-app/
 ├── tsconfig.json                             * Defines the root files and the compiler options
 ├── tslint.json                               * Defines the rules for the TypeScript linter
 ```
+
+###參考資料
+
+- [Android Icon 規範](http://iconhandbook.co.uk/reference/chart/android/)
